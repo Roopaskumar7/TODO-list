@@ -8,8 +8,7 @@ class ToDoApp:
         self.root.title("To-Do List")
 
         self.tasks = []
-
-        # Create UI components
+        
         self.task_entry = tk.Entry(root, width=40)
         self.task_entry.pack(pady=10)
 
@@ -74,8 +73,7 @@ class ToDoApp:
             with open("tasks.txt", "r") as f:
                 self.tasks = [line.strip() for line in f.readlines()]
             self.update_listbox()
-
-# Run the app
+            
 if __name__ == "__main__":
     root = tk.Tk()
     app = ToDoApp(root)
